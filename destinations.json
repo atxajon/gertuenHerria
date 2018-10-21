@@ -1,0 +1,128 @@
+{
+  "data": [
+    {
+      "label": "Abaltzisketa",
+      "distance": "41",
+      "eta": "40",
+      "ranking": "C"
+    },
+    {
+      "label": "Aduna",
+      "distance": "20",
+      "eta": "25",
+      "ranking": "B"
+    },
+    {
+      "label": "Aia",
+      "distance": "26",
+      "eta": "25",
+      "ranking": "B"
+    },
+    {
+      "label": "Albiztur",
+      "distance": "34",
+      "eta": "30",
+      "ranking": "C"
+    },
+    {
+      "label": "Alegia",
+      "distance": "33",
+      "eta": "30",
+      "ranking": "C"
+    },
+    {
+      "label": "Alkiza",
+      "distance": "29",
+      "eta": "30",
+      "ranking": "C"
+    },
+    {
+      "label": "Altzaga",
+      "distance": "43",
+      "eta": "35",
+      "ranking": "C"
+    },
+    {
+      "label": "Altzo",
+      "distance": "34",
+      "eta": "30",
+      "ranking": "C"
+    },
+    {
+      "label": "Amezketa",
+      "distance": "39",
+      "eta": "35",
+      "ranking": "C"
+    },
+    {
+      "label": "Andoain",
+      "distance": "16",
+      "eta": "20",
+      "ranking": "B"
+    },
+    {
+      "label": "Anoeta",
+      "distance": "25",
+      "eta": "20",
+      "ranking": "B"
+    },
+    {
+      "label": "Antzuola",
+      "distance": "62",
+      "eta": "50",
+      "ranking": "D"
+    },
+    {
+      "label": "Arama",
+      "distance": "31",
+      "eta": "40",
+      "ranking": "C"
+    },
+    {
+      "label": "Aretxabaleta",
+      "distance": "75",
+      "eta": "55",
+      "ranking": "D"
+    },    {
+      "label": "Arrasate",
+      "distance": "70",
+      "eta": "50",
+      "ranking": "D"
+    },    {
+      "label": "Asteasu",
+      "distance": "24",
+      "eta": "23",
+      "ranking": "B"
+    },    {
+      "label": "Astigarraga",
+      "distance": "10",
+      "eta": "10",
+      "ranking": "A"
+    },    {
+      "label": "Ataun",
+      "distance": "47",
+      "eta": "40",
+      "ranking": "C"
+    },    {
+      "label": "Azkoitia",
+      "distance": "46",
+      "eta": "50",
+      "ranking": "D"
+    },    {
+      "label": "Azpeitia",
+      "distance": "41",
+      "eta": "47",
+      "ranking": "D"
+    },    {
+      "label": "Baliarrain",
+      "distance": "39",
+      "eta": "33",
+      "ranking": "C"
+    },    {
+      "label": "Beasain",
+      "distance": "42",
+      "eta": "30",
+      "ranking": "C"
+    }
+  ]
+}
