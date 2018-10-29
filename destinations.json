@@ -17,6 +17,12 @@
       "distance": "26",
       "eta": "25",
       "ranking": "B"
+    },    
+    {
+      "label": "Aizarnazabal",
+      "distance": "36",
+      "eta": "32",
+      "ranking": "B"
     },
     {
       "label": "Albiztur",
@@ -83,46 +89,438 @@
       "distance": "75",
       "eta": "55",
       "ranking": "D"
-    },    {
+    },    
+    {
       "label": "Arrasate",
       "distance": "70",
       "eta": "50",
       "ranking": "D"
-    },    {
+    },    
+    {
       "label": "Asteasu",
       "distance": "24",
       "eta": "23",
       "ranking": "B"
-    },    {
+    },    
+    {
       "label": "Astigarraga",
       "distance": "10",
       "eta": "10",
       "ranking": "A"
-    },    {
+    },    
+    {
       "label": "Ataun",
       "distance": "47",
       "eta": "40",
       "ranking": "C"
-    },    {
+    },    
+    {
       "label": "Azkoitia",
       "distance": "46",
       "eta": "50",
       "ranking": "D"
-    },    {
+    },    
+    {
       "label": "Azpeitia",
       "distance": "41",
       "eta": "47",
       "ranking": "D"
-    },    {
+    },    
+    {
       "label": "Baliarrain",
       "distance": "39",
       "eta": "33",
       "ranking": "C"
-    },    {
+    },    
+    {
       "label": "Beasain",
-      "distance": "42",
+      "distance": "32",
+      "eta": "35",
+      "ranking": "C"
+    }, 
+    {
+      "label": "Beizama",
+      "distance": "40",
+      "eta": "40",
+      "ranking": "C"
+    },
+    {
+      "label": "Belauntza",
+      "distance": "33",
       "eta": "30",
       "ranking": "C"
+    },    
+    {
+      "label": "Berastegi",
+      "distance": "33",
+      "eta": "30",
+      "ranking": "C"
+    },    
+    {
+      "label": "Bergara",
+      "distance": "59",
+      "eta": "43",
+      "ranking": "D"
+    }, 
+    {
+      "label": "Berrobi",
+      "distance": "33",
+      "eta": "31",
+      "ranking": "C"
+    },
+    {
+      "label": "Bidania-Goiatz",
+      "distance": "37",
+      "eta": "32",
+      "ranking": "C"
+    },
+    {
+      "label": "Deba",
+      "distance": "41",
+      "eta": "35",
+      "ranking": "C"
+    },    
+    {
+      "label": "Eibar",
+      "distance": "55",
+      "eta": "50",
+      "ranking": "D"
+    },    
+    {
+      "label": "Elduain",
+      "distance": "36",
+      "eta": "33",
+      "ranking": "C"
+    }, 
+    {
+      "label": "Elgeta",
+      "distance": "65",
+      "eta": "51",
+      "ranking": "D"
+    },
+    {
+      "label": "Elgoibar",
+      "distance": "47",
+      "eta": "35",
+      "ranking": "C"
+    },    
+    {
+      "label": "Errenteria",
+      "distance": "12",
+      "eta": "15",
+      "ranking": "A"
+    },    
+    {
+      "label": "Errezil",
+      "distance": "43",
+      "eta": "43",
+      "ranking": "D"
+    }, 
+    {
+      "label": "Eskoriatza",
+      "distance": "76",
+      "eta": "52",
+      "ranking": "D"
+    },
+    {
+      "label": "Ezkio-Itsaso",
+      "distance": "54",
+      "eta": "45",
+      "ranking": "D"
+    },
+    {
+      "label": "Gabiria",
+      "distance": "52",
+      "eta": "41",
+      "ranking": "D"
+    },    
+    {
+      "label": "Gaintza",
+      "distance": "45",
+      "eta": "42",
+      "ranking": "D"
+    },    
+    {
+      "label": "Gaztelu",
+      "distance": "34",
+      "eta": "32",
+      "ranking": "C"
+    }, 
+    {
+      "label": "Getaria",
+      "distance": "28",
+      "eta": "32",
+      "ranking": "B"
+    },
+    {
+      "label": "Hernani",
+      "distance": "8",
+      "eta": "13",
+      "ranking": "A"
+    },
+    {
+      "label": "Hernialde",
+      "distance": "26",
+      "eta": "26",
+      "ranking": "B"
+    },
+    {
+      "label": "Hondarribia",
+      "distance": "23",
+      "eta": "25",
+      "ranking": "C"
+    },    
+    {
+      "label": "Ibarra",
+      "distance": "29",
+      "eta": "26",
+      "ranking": "C"
+    },    
+    {
+      "label": "Idiazabal",
+      "distance": "50",
+      "eta": "38",
+      "ranking": "D"
+    }, 
+    {
+      "label": "Ikaztegieta",
+      "distance": "34",
+      "eta": "31",
+      "ranking": "C"
+    },
+    {
+      "label": "Irun",
+      "distance": "20",
+      "eta": "23",
+      "ranking": "B"
+    },
+    {
+      "label": "Irura",
+      "distance": "23",
+      "eta": "20",
+      "ranking": "B"
+    },
+    {
+      "label": "Itsasondo",
+      "distance": "41",
+      "eta": "33",
+      "ranking": "C"
+    },    
+    {
+      "label": "Larraul",
+      "distance": "26",
+      "eta": "26",
+      "ranking": "C"
+    },    
+    {
+      "label": "Lasarte",
+      "distance": "9",
+      "eta": "10",
+      "ranking": "A"
+    }, 
+    {
+      "label": "Lazkao",
+      "distance": "43",
+      "eta": "33",
+      "ranking": "C"
+    },
+    {
+      "label": "Leaburu",
+      "distance": "30",
+      "eta": "26",
+      "ranking": "C"
+    },
+    {
+      "label": "Legazpi",
+      "distance": "36",
+      "eta": "30",
+      "ranking": "C"
+    },
+    {
+      "label": "Legorreta",
+      "distance": "41",
+      "eta": "33",
+      "ranking": "C"
+    },    
+    {
+      "label": "Leintz-Gatzaga",
+      "distance": "80",
+      "eta": "60",
+      "ranking": "E"
+    },    
+    {
+      "label": "Lezo",
+      "distance": "10",
+      "eta": "12",
+      "ranking": "A"
+    }, 
+    {
+      "label": "Lizartza",
+      "distance": "35",
+      "eta": "30",
+      "ranking": "C"
+    },
+    {
+      "label": "Mendaro",
+      "distance": "49",
+      "eta": "37",
+      "ranking": "C"
+    },
+    {
+      "label": "Mutiloa",
+      "distance": "51",
+      "eta": "44",
+      "ranking": "D"
+    },
+    {
+      "label": "Mutriku",
+      "distance": "47",
+      "eta": "48",
+      "ranking": "C"
+    },    
+    {
+      "label": "Oiartzun",
+      "distance": "12",
+      "eta": "19",
+      "ranking": "A"
+    },    
+    {
+      "label": "Olaberria",
+      "distance": "46",
+      "eta": "40",
+      "ranking": "D"
+    }, 
+    {
+      "label": "Oñati",
+      "distance": "75",
+      "eta": "57",
+      "ranking": "E"
+    },
+    {
+      "label": "Ordizia",
+      "distance": "40",
+      "eta": "36",
+      "ranking": "C"
+    },    
+    {
+      "label": "Orendain",
+      "distance": "37",
+      "eta": "42",
+      "ranking": "C"
+    },    
+    {
+      "label": "Orexa",
+      "distance": "38",
+      "eta": "41",
+      "ranking": "D"
+    }, 
+    {
+      "label": "Orio",
+      "distance": "16",
+      "eta": "20",
+      "ranking": "A"
+    },
+    {
+      "label": "Ormaiztegi",
+      "distance": "48",
+      "eta": "41",
+      "ranking": "D"
+    },    
+    {
+      "label": "Pasaia",
+      "distance": "13",
+      "eta": "15",
+      "ranking": "A"
+    },    
+    {
+      "label": "Segura",
+      "distance": "50",
+      "eta": "43",
+      "ranking": "D"
+    }, 
+    {
+      "label": "Soraluze",
+      "distance": "66",
+      "eta": "51",
+      "ranking": "D"
+    },
+    {
+      "label": "Tolosa",
+      "distance": "29",
+      "eta": "30",
+      "ranking": "C"
+    },    
+    {
+      "label": "Urnieta",
+      "distance": "12",
+      "eta": "15",
+      "ranking": "A"
+    },    
+    {
+      "label": "Urretxu",
+      "distance": "57",
+      "eta": "47",
+      "ranking": "D"
+    }, 
+    {
+      "label": "Usurbil",
+      "distance": "10",
+      "eta": "12",
+      "ranking": "A"
+    },
+    {
+      "label": "Villabona",
+      "distance": "22",
+      "eta": "27",
+      "ranking": "B"
+    },    
+    {
+      "label": "Zaldibia",
+      "distance": "43",
+      "eta": "39",
+      "ranking": "D"
+    },    
+    {
+      "label": "Zarautz",
+      "distance": "20",
+      "eta": "20",
+      "ranking": "A"
+    }, 
+    {
+      "label": "Zegama",
+      "distance": "55",
+      "eta": "48",
+      "ranking": "D"
+    },
+    {
+      "label": "Zerain",
+      "distance": "52",
+      "eta": "46",
+      "ranking": "D"
+    },    
+    {
+      "label": "Zestoa",
+      "distance": "34",
+      "eta": "30",
+      "ranking": "C"
+    },    
+    {
+      "label": "Zizurkil",
+      "distance": "21",
+      "eta": "24",
+      "ranking": "B"
+    }, 
+    {
+      "label": "Zumaia",
+      "distance": "35",
+      "eta": "34",
+      "ranking": "C"
+    },
+    {
+      "label": "Zumarraga",
+      "distance": "58",
+      "eta": "46",
+      "ranking": "D"
     }
   ]
 }

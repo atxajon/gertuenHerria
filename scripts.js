@@ -1,5 +1,4 @@
-document.addEventListener('DOMContentLoaded', function(event) {
-  
+document.addEventListener('DOMContentLoaded', function(event) {  
   /*
   * 
   **/
@@ -117,13 +116,15 @@ document.addEventListener('DOMContentLoaded', function(event) {
       xobj.send(null);
     }
     
+
     // Runs on init: gets the JSON villages from file and feeds them to the autocomplete function.
     loadJSON(function(response) {
       const dataObj = JSON.parse(response);
-      const destinationsArray = dataObj.data;
+      dataObj2 = JSON.parse(response);
+      destinationsObj = dataObj.data;
       let destinationNames = [];
-      for (let index in destinationsArray) {
-        destinationNames.push(destinationsArray[index].label);
+      for (let index in destinationsObj) {
+        destinationNames.push(destinationsObj[index].label);
       }
       
       autocomplete(document.querySelector('#search-input'), destinationNames);
@@ -131,6 +132,57 @@ document.addEventListener('DOMContentLoaded', function(event) {
       autocomplete(document.querySelector('#search-input3'), destinationNames);
     });
     
+    
+    const getJSONdata = async () => {
+      const fileToFetch = 'destinations.json';
+      try {
+        const response = await fetch(fileToFetch);
+        if (response.ok) {
+          const jsonResponse = await response.json(); 
+          return jsonResponse.data;
+
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    
+    /**
+     * Converts an array of objects to an object.
+     * So that insetad of:
+     *  const peopleArray = [
+          { id: 123, name: "dave", age: 23 },
+          { id: 456, name: "chris", age: 23 },
+        ]
+     * ...we can work with:
+     *  const peopleObject = {
+          "123": { id: 123, name: "dave", age: 23 },
+          "456": { id: 456, name: "chris", age: 23 },
+        }
+     * ...then we can query for data with:
+     * const selectedPerson = peopleObject[idToSelect];
+     * https://medium.com/dailyjs/rewriting-javascript-converting-an-array-of-objects-to-an-object-ec579cafbfc7
+     * 
+     */
+    const arrayToObject = (array, keyField) =>
+    array.reduce((obj, item) => {
+      obj[item[keyField]] = item
+      return obj
+    }, {})
+    
+    
+    document.querySelector('#search-form').addEventListener('submit', function(e) {
+      const input1 = document.querySelector('#search-input').value;
+      const input2 = document.querySelector('#search-input2').value;
+      const input3 = document.querySelector('#search-input3').value;
+      getJSONdata().then(promiseValue => {
+        console.log(promiseValue);
+        const villagesObj = arrayToObject(promiseValue, 'label');
+        console.log(villagesObj['Aia']);
+      })
+
+      e.preventDefault();
+    })
     
   })
   
