@@ -152,11 +152,26 @@ document.addEventListener('DOMContentLoaded', function(event) {
       
       
       document.querySelector('#search-form').addEventListener('submit', function(e) {
+        let inputsArray = [];
+        // @todo: fix when user only populates 2 input boxes...
+        inputsArray.push(document.querySelector('#search-input').value, document.querySelector('#search-input2').value, document.querySelector('#search-input3').value);
         const input1 = document.querySelector('#search-input').value;
         const input2 = document.querySelector('#search-input2').value;
         const input3 = document.querySelector('#search-input3').value;
-        console.log(villagesObj['Aia']);
-        
+
+        // Initialise with a ridiculously high value.
+        let min = 10000000;
+        let nearestVillage = {};
+        for (let i = 0; i < inputsArray.length; i++) {
+          let eta = villagesObj[inputsArray[i]].eta;
+          if (eta < min) {
+            min = eta;
+            nearestVillage.label = villagesObj[inputsArray[i]].label;
+            nearestVillage.eta = villagesObj[inputsArray[i]].eta;
+            nearestVillage.distance = villagesObj[inputsArray[i]].distance;
+          }
+        }
+        alert(`Nearest village is: ${nearestVillage.label}, ${nearestVillage.distance} kms away, ${nearestVillage.eta} minutes drive`);
         e.preventDefault();
       })
       
