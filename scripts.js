@@ -1,7 +1,5 @@
 document.addEventListener('DOMContentLoaded', function(event) {  
-  /*
-  * 
-  **/
+
   function autocomplete(inp, haystackValues) {
     // the autocomplete function takes two arguments,
     // an array of text field element and an array of possible autocompleted values:*/
@@ -103,44 +101,14 @@ document.addEventListener('DOMContentLoaded', function(event) {
       });
     }
     
-    function loadJSON(callback) {   
-      var xobj = new XMLHttpRequest();
-      xobj.overrideMimeType("application/json");
-      xobj.open('GET', 'destinations.json', true);
-      xobj.onreadystatechange = function () {
-        if (xobj.readyState == 4 && xobj.status == "200") {
-          // Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
-          callback(xobj.responseText);
-        }
-      };
-      xobj.send(null);
-    }
-    
-
-    // Runs on init: gets the JSON villages from file and feeds them to the autocomplete function.
-    loadJSON(function(response) {
-      const dataObj = JSON.parse(response);
-      dataObj2 = JSON.parse(response);
-      destinationsObj = dataObj.data;
-      let destinationNames = [];
-      for (let index in destinationsObj) {
-        destinationNames.push(destinationsObj[index].label);
-      }
-      
-      autocomplete(document.querySelector('#search-input'), destinationNames);
-      autocomplete(document.querySelector('#search-input2'), destinationNames);
-      autocomplete(document.querySelector('#search-input3'), destinationNames);
-    });
-    
     
     const getJSONdata = async () => {
       const fileToFetch = 'destinations.json';
       try {
         const response = await fetch(fileToFetch);
         if (response.ok) {
-          const jsonResponse = await response.json(); 
-          return jsonResponse.data;
-
+          const responseBodyObj = await response.json(); // .json() returns an obj parsed from the json body of the response.
+          return responseBodyObj.data;
         }
       } catch (error) {
         console.log(error);
@@ -148,22 +116,22 @@ document.addEventListener('DOMContentLoaded', function(event) {
     }
     
     /**
-     * Converts an array of objects to an object.
-     * So that insetad of:
-     *  const peopleArray = [
-          { id: 123, name: "dave", age: 23 },
-          { id: 456, name: "chris", age: 23 },
-        ]
-     * ...we can work with:
-     *  const peopleObject = {
-          "123": { id: 123, name: "dave", age: 23 },
-          "456": { id: 456, name: "chris", age: 23 },
-        }
-     * ...then we can query for data with:
-     * const selectedPerson = peopleObject[idToSelect];
-     * https://medium.com/dailyjs/rewriting-javascript-converting-an-array-of-objects-to-an-object-ec579cafbfc7
-     * 
-     */
+    * Converts an array of objects to an object.
+    * So that insetad of:
+    *  const peopleArray = [
+      { id: 123, name: "dave", age: 23 },
+      { id: 456, name: "chris", age: 23 },
+    ]
+    * ...we can work with:
+    *  const peopleObject = {
+      "123": { id: 123, name: "dave", age: 23 },
+      "456": { id: 456, name: "chris", age: 23 },
+    }
+    * ...then we can query for data with:
+    * const selectedPerson = peopleObject[idToSelect];
+    * https://medium.com/dailyjs/rewriting-javascript-converting-an-array-of-objects-to-an-object-ec579cafbfc7
+    * 
+    */
     const arrayToObject = (array, keyField) =>
     array.reduce((obj, item) => {
       obj[item[keyField]] = item
@@ -171,18 +139,28 @@ document.addEventListener('DOMContentLoaded', function(event) {
     }, {})
     
     
-    document.querySelector('#search-form').addEventListener('submit', function(e) {
-      const input1 = document.querySelector('#search-input').value;
-      const input2 = document.querySelector('#search-input2').value;
-      const input3 = document.querySelector('#search-input3').value;
-      getJSONdata().then(promiseValue => {
-        console.log(promiseValue);
-        const villagesObj = arrayToObject(promiseValue, 'label');
+    // Runs on init.
+    getJSONdata().then(function(promiseValue) {
+      const villagesObj = arrayToObject(promiseValue, 'label');
+      let destinationNames = [];
+      for (let index in promiseValue) {
+        destinationNames.push(promiseValue[index].label);
+      }
+      autocomplete(document.querySelector('#search-input'), destinationNames);
+      autocomplete(document.querySelector('#search-input2'), destinationNames);
+      autocomplete(document.querySelector('#search-input3'), destinationNames);
+      
+      
+      document.querySelector('#search-form').addEventListener('submit', function(e) {
+        const input1 = document.querySelector('#search-input').value;
+        const input2 = document.querySelector('#search-input2').value;
+        const input3 = document.querySelector('#search-input3').value;
         console.log(villagesObj['Aia']);
+        
+        e.preventDefault();
       })
-
-      e.preventDefault();
+      
     })
     
   })
-  
+
