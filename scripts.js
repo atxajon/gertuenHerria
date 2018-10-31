@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function(event) {  
-
+  // @todo: refactor into own autocomplete module.
   function autocomplete(inp, haystackValues) {
     // the autocomplete function takes two arguments,
     // an array of text field element and an array of possible autocompleted values:*/
@@ -172,6 +172,9 @@ document.addEventListener('DOMContentLoaded', function(event) {
           }
         }
         alert(`Nearest village is: ${nearestVillage.label}, ${nearestVillage.distance} kms away, ${nearestVillage.eta} minutes drive`);
+
+        // @todo: add a clear button.
+        // @todo: add responsiveness for mobile.
         e.preventDefault();
       })
       
