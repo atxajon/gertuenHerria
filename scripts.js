@@ -1,5 +1,7 @@
 document.addEventListener('DOMContentLoaded', function(event) {  
   // @todo: refactor into own autocomplete module.
+
+  // @todo: add add to home button banner, service worker.
   function autocomplete(inp, haystackValues) {
     // the autocomplete function takes two arguments,
     // an array of text field element and an array of possible autocompleted values:*/
