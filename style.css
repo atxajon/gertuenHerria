@@ -93,3 +93,25 @@ input[type=submit] {
 .btn:not(:disabled):not(.disabled) {
   cursor: pointer;
 }
+.hide {
+  display: none;
+}
+.btn-clear {
+  margin-left: 5px;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  .right {
+      float: right;
+  }
+}
+@media only screen and (min-width: 601px) {
+  .left {
+      float: left;
+      margin-right: 20px;
+  }
+}

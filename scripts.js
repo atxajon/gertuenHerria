@@ -171,9 +171,12 @@ document.addEventListener('DOMContentLoaded', function(event) {
           }
         }
         alert(`Nearest village is: ${nearestVillage.label}, ${nearestVillage.distance} kms away, ${nearestVillage.eta} minutes drive`);
+        
+        // Toggle Clear button.
+        let clearBtn = document.querySelector('.hide');
+        clearBtn.classList.add('is-visible');
+        clearBtn.classList.remove('hide');
 
-        // @todo: add a clear button.
-        // @todo: add responsiveness for mobile.
         e.preventDefault();
       })
       

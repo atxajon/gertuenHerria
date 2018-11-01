@@ -12,16 +12,22 @@
 <body>
   <h3>Aukeran dauden herriak:</h3>
   <form id="search-form">
-    <div class="form-group autocomplete">
-      <input type="text" id="search-input" class="form-control mb-3" placeholder="Herriaren izena...">
-    </div>
-    <div class="form-group autocomplete">
-      <input type="text" id="search-input2" class="form-control mb-3" placeholder="2. herriaren izena...">
-    </div>
-    <div class="form-group autocomplete">
+    <div class="left">
+      <div class="form-group autocomplete">
+        <input type="text" id="search-input" class="form-control mb-3" placeholder="Herriaren izena...">
+      </div>
+      <div class="form-group autocomplete">
+        <input type="text" id="search-input2" class="form-control mb-3" placeholder="2. herriaren izena...">
+      </div>
+      <div class="form-group autocomplete">
         <input type="text" id="search-input3" class="form-control mb-3" placeholder="3. herriaren izena...">
       </div>
-    <button type="submit" class="btn btn-primary mt-4">Urbilena</button>
+    </div>
+    <div class="right">
+      <button type="submit" class="btn btn-primary mt-4">Urbilena</button>
+      <button type="submit" class="btn mt-4 hide btn-clear">Clear</button>
+      
+    </div>
   </form>
 </div>
 <script src="scripts.js"></script>
