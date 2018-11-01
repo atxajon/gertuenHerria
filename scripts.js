@@ -144,31 +144,30 @@ document.addEventListener('DOMContentLoaded', function(event) {
       const villagesObj = arrayToObject(promiseValue, 'label');
       let destinationNames = [];
       for (let index in promiseValue) {
+        // Store just the village names in an array.
         destinationNames.push(promiseValue[index].label);
       }
-      autocomplete(document.querySelector('#search-input'), destinationNames);
-      autocomplete(document.querySelector('#search-input2'), destinationNames);
-      autocomplete(document.querySelector('#search-input3'), destinationNames);
-      
+
+      const formControls = document.querySelectorAll('.autocomplete .form-control');
+      for (let i = 0; i < formControls.length; i++) {
+        // Feed the village names to the autocomplete function.
+        autocomplete(formControls[i], destinationNames);
+      }
       
       document.querySelector('#search-form').addEventListener('submit', function(e) {
-        let inputsArray = [];
-        // @todo: fix when user only populates 2 input boxes...
-        inputsArray.push(document.querySelector('#search-input').value, document.querySelector('#search-input2').value, document.querySelector('#search-input3').value);
-        const input1 = document.querySelector('#search-input').value;
-        const input2 = document.querySelector('#search-input2').value;
-        const input3 = document.querySelector('#search-input3').value;
-
-        // Initialise with a ridiculously high value.
-        let min = 10000000;
+        // Initialise lowest time to destination with a ridiculously high value.
+        let lowestEta = 10000000;
         let nearestVillage = {};
-        for (let i = 0; i < inputsArray.length; i++) {
-          let eta = villagesObj[inputsArray[i]].eta;
-          if (eta < min) {
-            min = eta;
-            nearestVillage.label = villagesObj[inputsArray[i]].label;
-            nearestVillage.eta = villagesObj[inputsArray[i]].eta;
-            nearestVillage.distance = villagesObj[inputsArray[i]].distance;
+        // Loop through form controls, test for their value and store the one with lowest driving distance.
+        for (let i = 0; i < formControls.length; i++) {
+          if (formControls[i].value) {
+            let thisEta = villagesObj[formControls[i].value].eta;
+            if (thisEta < lowestEta) {
+              lowestEta = thisEta;
+              nearestVillage.label = villagesObj[formControls[i].value].label;
+              nearestVillage.eta = villagesObj[formControls[i].value].eta;
+              nearestVillage.distance = villagesObj[formControls[i].value].distance;
+            }
           }
         }
         alert(`Nearest village is: ${nearestVillage.label}, ${nearestVillage.distance} kms away, ${nearestVillage.eta} minutes drive`);
